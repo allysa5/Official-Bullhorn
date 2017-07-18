@@ -11,21 +11,21 @@ import model.Bhpost;
 public class DBBullhorn {
 
     public static void insert(Bhpost bhPost) {
-    	 EntityManager em = DBUtil.getEmFactory().createEntityManager();
-    	 EntityTransaction trans = em.getTransaction();
-    	 //System.out.println("DbBullhorn: begin transaction");
-    	 try {
-    	 trans.begin();
-    	 em.persist(bhPost);
-    	 //System.out.println("DbBullhorn: commit transaction");
-    	 trans.commit();
-    	 } catch (Exception e) {
-    	 e.printStackTrace();
-    	 //System.out.println("DbBullhorn: rollback transaction");
-    	 trans.rollback();
-    	 } finally {
-    	 //System.out.println("DbBullhorn: close em");
-    	 em.close();
+   	 EntityManager em = DBUtil.getEmFactory().createEntityManager();
+   	 EntityTransaction trans = em.getTransaction();
+   	 //System.out.println("DbBullhorn: begin transaction");
+   	 try {
+   	 trans.begin();
+   	 em.persist(bhPost);
+   	 //System.out.println("DbBullhorn: commit transaction");
+   	 trans.commit();
+   	 } catch (Exception e) {
+   	 e.printStackTrace();
+   	 //System.out.println("DbBullhorn: rollback transaction");
+   	 trans.rollback();
+   	 } finally {
+   	 //System.out.println("DbBullhorn: close em");
+   	 em.close();
     	 }
     }
 

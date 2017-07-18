@@ -8,6 +8,7 @@
 <link href="Style.css" rel = "stylesheet"/>
 </head>
 <body>
+
 <form action= "LoginServlet" method="post">
 Email: <input type="text" name="email" id="email"></input><br>
 password: <input type="password" name="password" ><br>
